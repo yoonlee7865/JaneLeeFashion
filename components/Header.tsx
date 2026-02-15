@@ -18,12 +18,12 @@ const Header: React.FC<HeaderProps> = ({ siteTitle, currentSection, onNavigate }
           {siteTitle}
         </button>
         
-        <nav className="flex gap-10 text-sm font-medium uppercase tracking-widest">
+        <nav className="flex gap-12 text-base font-medium uppercase tracking-widest">
           {['work', 'about', 'contact'].map((section) => (
             <button
               key={section}
               onClick={() => onNavigate(section as any)}
-              className={`hover:opacity-50 transition-opacity pb-1 border-b-2 ${
+              className={`hover:opacity-50 transition-all pb-1 border-b-2 ${
                 currentSection === section ? 'border-black' : 'border-transparent'
               }`}
             >

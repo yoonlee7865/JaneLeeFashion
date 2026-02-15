@@ -7,7 +7,7 @@ interface AboutProps {
 
 const About: React.FC<AboutProps> = ({ text }) => {
   return (
-    <section className="max-w-6xl mx-auto py-12 md:py-24 animate-in fade-in duration-1000">
+    <section className="max-w-6xl mx-auto py-12 md:py-24 fade-in">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
         
         {/* Left Column: Identity & Contact */}
@@ -15,17 +15,17 @@ const About: React.FC<AboutProps> = ({ text }) => {
           <div className="pt-4">
             <h1 className="editorial-font text-6xl md:text-8xl leading-tight mb-12">Jane <br />Jeongyoon Lee</h1>
             <div className="space-y-8 pt-10 border-t border-black/10">
-              <div className="space-y-6 text-xs uppercase tracking-[0.3em] text-black/60">
-                <div className="space-y-2">
-                  <p className="text-black font-bold">Contact</p>
-                  <p className="hover:text-black transition-colors text-sm normal-case tracking-normal">yoonlee7865@gmail.com</p>
-                  <p className="text-sm tracking-widest">(+1) 912-210-9409</p>
-                  <p className="text-sm tracking-widest">(+82) 010-2079-7865</p>
+              <div className="space-y-6 text-sm uppercase tracking-[0.2em] text-black/60">
+                <div className="space-y-3">
+                  <p className="text-black font-bold text-base">Contact</p>
+                  <p className="hover:text-black transition-colors text-base normal-case tracking-normal">yoonlee7865@gmail.com</p>
+                  <p className="text-base tracking-widest">(+1) 912-210-9409</p>
+                  <p className="text-base tracking-widest">(+82) 010-2079-7865</p>
                 </div>
-                <div className="space-y-2 pt-6">
-                  <p className="text-black font-bold">Location</p>
-                  <p className="text-sm">Savannah, GA</p>
-                  <p className="text-sm">Busan, KR</p>
+                <div className="space-y-3 pt-6">
+                  <p className="text-black font-bold text-base">Location</p>
+                  <p className="text-base">Savannah, GA</p>
+                  <p className="text-base">Busan, KR</p>
                 </div>
               </div>
             </div>
@@ -37,29 +37,29 @@ const About: React.FC<AboutProps> = ({ text }) => {
           
           {/* Education */}
           <section>
-            <h2 className="text-xs font-bold uppercase tracking-[0.5em] mb-10 border-b border-black pb-4 text-black/40">Education</h2>
-            <div className="space-y-10">
+            <h2 className="text-sm font-bold uppercase tracking-[0.4em] mb-10 border-b border-black pb-4 text-black/40">Education</h2>
+            <div className="space-y-12">
               <div>
                 <div className="flex justify-between items-baseline mb-2">
-                  <h3 className="editorial-font text-3xl">Savannah College of Art and Design</h3>
-                  <span className="text-xs tracking-widest opacity-40">MFA</span>
+                  <h3 className="editorial-font text-3xl md:text-4xl">Savannah College of Art and Design</h3>
+                  <span className="text-sm tracking-widest opacity-40">MFA</span>
                 </div>
-                <p className="text-xs uppercase tracking-widest text-black/60 italic font-medium">Fashion</p>
+                <p className="text-sm uppercase tracking-widest text-black/60 italic font-medium">Fashion</p>
               </div>
               <div>
                 <div className="flex justify-between items-baseline mb-2">
-                  <h3 className="editorial-font text-3xl">Pukyong National University</h3>
-                  <span className="text-xs tracking-widest opacity-40">BA</span>
+                  <h3 className="editorial-font text-3xl md:text-4xl">Pukyong National University</h3>
+                  <span className="text-sm tracking-widest opacity-40">BA</span>
                 </div>
-                <p className="text-xs uppercase tracking-widest text-black/60 italic font-medium">Fashion Design</p>
+                <p className="text-sm uppercase tracking-widest text-black/60 italic font-medium">Fashion Design</p>
               </div>
             </div>
           </section>
 
           {/* Experience */}
           <section>
-            <h2 className="text-xs font-bold uppercase tracking-[0.5em] mb-10 border-b border-black pb-4 text-black/40">Professional Experience</h2>
-            <div className="space-y-16">
+            <h2 className="text-sm font-bold uppercase tracking-[0.4em] mb-10 border-b border-black pb-4 text-black/40">Professional Experience</h2>
+            <div className="space-y-20">
               <ResumeItem 
                 title="Loro Piana"
                 role="Sales Assistant"
@@ -106,23 +106,23 @@ const About: React.FC<AboutProps> = ({ text }) => {
           {/* Skills & Others */}
           <section className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8">
             <div className="space-y-6">
-              <h2 className="text-xs font-bold uppercase tracking-[0.5em] border-b border-black/10 pb-2 text-black/40">Technical Skills</h2>
-              <div className="flex flex-wrap gap-2">
+              <h2 className="text-sm font-bold uppercase tracking-[0.4em] border-b border-black/10 pb-2 text-black/40">Technical Skills</h2>
+              <div className="flex flex-wrap gap-3">
                 {['Adobe Photoshop', 'Adobe Illustrator', 'Creative Suite', 'Visual Merchandising'].map(skill => (
-                  <span key={skill} className="text-xs uppercase tracking-widest border border-black/10 px-4 py-2 bg-gray-50">
+                  <span key={skill} className="text-xs uppercase tracking-[0.2em] border border-black/10 px-5 py-3 bg-gray-50">
                     {skill}
                   </span>
                 ))}
               </div>
             </div>
             <div className="space-y-6">
-              <h2 className="text-xs font-bold uppercase tracking-[0.5em] border-b border-black/10 pb-2 text-black/40">Languages</h2>
-              <div className="space-y-3">
-                <p className="text-sm flex justify-between">
+              <h2 className="text-sm font-bold uppercase tracking-[0.4em] border-b border-black/10 pb-2 text-black/40">Languages</h2>
+              <div className="space-y-4">
+                <p className="text-base flex justify-between">
                   <span className="font-bold tracking-widest uppercase">KOREAN</span>
                   <span className="opacity-40 italic">Native</span>
                 </p>
-                <p className="text-sm flex justify-between">
+                <p className="text-base flex justify-between">
                   <span className="font-bold tracking-widest uppercase">ENGLISH</span>
                   <span className="opacity-40 italic">IELTS 7.0 / Intermediate</span>
                 </p>
@@ -144,16 +144,16 @@ interface ResumeItemProps {
 }
 
 const ResumeItem: React.FC<ResumeItemProps> = ({ title, role, date, points }) => (
-  <div className="space-y-5 group">
+  <div className="space-y-6 group">
     <div className="flex justify-between items-baseline">
-      <h3 className="editorial-font text-4xl group-hover:pl-4 transition-all duration-300">{title}</h3>
-      <span className="text-xs tracking-[0.2em] opacity-40 font-medium">{date}</span>
+      <h3 className="editorial-font text-4xl md:text-5xl group-hover:pl-4 transition-all duration-300">{title}</h3>
+      <span className="text-sm tracking-[0.2em] opacity-40 font-medium">{date}</span>
     </div>
-    <p className="text-xs uppercase tracking-[0.2em] font-bold text-black/90">{role}</p>
-    <ul className="space-y-3">
+    <p className="text-sm uppercase tracking-[0.2em] font-bold text-black/90">{role}</p>
+    <ul className="space-y-4">
       {points.map((point, idx) => (
-        <li key={idx} className="flex gap-4 text-sm leading-relaxed text-black/60 font-light">
-          <span className="mt-2.5 w-1.5 h-px bg-black/30 shrink-0"></span>
+        <li key={idx} className="flex gap-4 text-base leading-relaxed text-black/60 font-light">
+          <span className="mt-3 w-2 h-px bg-black/30 shrink-0"></span>
           {point}
         </li>
       ))}

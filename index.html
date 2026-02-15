@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ARCHIVE</title>
+  <title>ARCHIVE | Jane Jeongyoon Lee</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +15,7 @@
       background-color: #FFFFFF;
       color: #000000;
       scroll-behavior: smooth;
+      opacity: 1 !important; /* 애니메이션 클래스 오류 방지 */
     }
     .editorial-font {
       font-family: 'Playfair Display', serif;
@@ -28,10 +29,12 @@
     ::-webkit-scrollbar-thumb {
       background: #000;
     }
-    .masonry-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 2rem;
+    .fade-in {
+      animation: fadeIn 1s ease-in forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
   </style>
 <script type="importmap">
@@ -40,12 +43,14 @@
     "react/": "https://esm.sh/react@^19.2.4/",
     "react": "https://esm.sh/react@^19.2.4",
     "lucide-react": "https://esm.sh/lucide-react@^0.564.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react-dom/client": "https://esm.sh/react-dom@^19.2.4/client"
   }
 }
 </script>
 </head>
 <body>
   <div id="root"></div>
+  <script type="module" src="./index.tsx"></script>
 </body>
 </html>
